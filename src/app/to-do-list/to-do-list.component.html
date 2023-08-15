@@ -1,0 +1,54 @@
+<div class="main-container">
+ <div class="center-container">
+    <mat-card  style="width: 50rem;">
+      <mat-card-content>
+   
+        <div class="container">
+          <div class="date-card">
+            <h1 class="title">To Do List</h1>
+            <hr>
+            <p class="current-date">{{  getCurrentDateTime() }}</p>
+          </div>
+        </div>
+
+        <form [formGroup] = 'todoForm'>
+        <mat-form-field style="width: 500px; margin: 20px;" appearance="outline">
+          <mat-label>{{ title }}</mat-label>
+          <input formControlName="item" matInput placeholder="Things you want to do today" #task>
+          <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        </mat-form-field>
+        <button (click)="addTask(task.value)" mat-raised-button [disabled]="todoForm.invalid" color="primary" style="margin-left: 10px;">ADD</button>
+      </form>
+      <div class="table-container">
+        <table class="table table-custom table-striped">
+          <thead>
+            <tr>
+              <th scope="col">SL No</th>
+              <th scope="col">Task</th>
+
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of list; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{item.name}}</td>
+              <td> <button (click)="removeTask(item.id)" mat-raised-button color="warn" style="margin-left: 10px;">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+ 
+
+
+
+
+
+
+  

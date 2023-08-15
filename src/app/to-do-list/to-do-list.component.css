@@ -1,0 +1,54 @@
+.example-card {
+    max-width: 400px;
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+
+  
+  .date-card {
+    background: linear-gradient(to right, #2980b9, #6dd5fa); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    color: #ffffff; 
+  }
+  
+  .date-card .title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .date-card .current-date {
+    font-size: 1rem;
+  }
+  
+ 
+.table-custom {
+  background: linear-gradient(to right, #2980b9, #6dd5fa); 
+  color: #ffffff;
+}
+
+
+.table-custom th {
+  border-color: #ffffff;
+}
+
+
+.table-custom tr {
+  border-color: #ffffff; 
+}
+
+
+.table-custom td {
+  border-color: #ffffff; 
+}
+
+
+
+
+  
